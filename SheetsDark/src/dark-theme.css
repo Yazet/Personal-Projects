@@ -1,0 +1,29 @@
+/*
+  The extension toggles this theme by setting html[data-sheets-dark="on"]
+  from the content script.
+*/
+
+:root {
+  --sheets-dark-bg: #14161a;
+}
+
+html[data-sheets-dark="on"] {
+  background: var(--sheets-dark-bg) !important;
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Re-invert media that should keep their original colours (photos, videos).
+   Canvas is intentionally excluded so the Sheets cell grid is also darkened. */
+html[data-sheets-dark="on"] img,
+html[data-sheets-dark="on"] video,
+html[data-sheets-dark="on"] [style*="background-image"] {
+  filter: invert(1) hue-rotate(180deg) !important;
+}
+
+/* Keep native form controls visually consistent. */
+html[data-sheets-dark="on"] input,
+html[data-sheets-dark="on"] textarea,
+html[data-sheets-dark="on"] select,
+html[data-sheets-dark="on"] button {
+  border-color: #4a4f57 !important;
+}

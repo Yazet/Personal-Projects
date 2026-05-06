@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "SheetsDark",
+  "description": "Simple and maintainable dark mode for Google Sheets.",
+  "version": "1.0.0",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SheetsDark"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://docs.google.com/spreadsheets/*"],
+      "js": ["src/content.js"],
+      "css": ["src/dark-theme.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

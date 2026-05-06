@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheetsDark</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+
+      body {
+        margin: 0;
+        width: 220px;
+        padding: 14px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #111318;
+        color: #e8eaed;
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        cursor: pointer;
+      }
+
+      p {
+        margin: 10px 0 0;
+        font-size: 12px;
+        color: #a9adb5;
+        line-height: 1.35;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SheetsDark</h1>
+    <label>
+      <input id="enabled" type="checkbox" />
+      Enable dark mode
+    </label>
+    <p>Applies to docs.google.com/spreadsheets pages.</p>
+    <script src="popup.js"></script>
+  </body>
+</html>
